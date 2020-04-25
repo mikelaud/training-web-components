@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Define (web component)</title>
+    <script>
+        customElements.define('web-component', class extends HTMLElement {});
+        if (!customElements.get('web-component')) {
+            customElements.define('web-component', class extends HTMLElement {});
+        }
+        console.log(customElements.define('web-component', class extends HTMLElement {}));
+    </script>
+</head>
+<body>
+    <web-component>web-component</web-component>
+</body>
+</html>
