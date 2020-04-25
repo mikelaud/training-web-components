@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logic (web component)</title>
+    <script>
+        class WebComponent extends HTMLElement {
+            connectedCallback() {
+                alert('Hi from WebComponent')
+            }
+        }
+        if (!customElements.get('web-component')) {
+            customElements.define('web-component', WebComponent);
+        }
+    </script>
+</head>
+<body>
+    <web-component>web-component</web-component>
+</body>
+</html>
